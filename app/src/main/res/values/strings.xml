@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Magic8Ball</string>
+    <string name="raputa">Raputa, et saada vastust!</string>
+    <string name="menu">Raputa</string>
+    <!--Loome stringi massiivi oma vastuste jaoks -->
+    <string-array name="vastused">
+        <item>Jah, kindlasti</item>
+        <item>Mitte kunagi</item>
+        <item>Maailma lõpp</item>
+        <item>Küsi hiljem uuesti</item>
+        <item>Lootust on</item>
+    </string-array>
+</resources>
