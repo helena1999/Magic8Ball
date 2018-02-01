@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E8EAF6"
-    tools:context="com.example.opilane.magic8ball.MainActivity">
+    tools:context="com.example.opilane.magic8ball.MainActivity"
+    android:id="@+id/magic1">
 
     <!-- ImageView palli jaoks-->
     <ImageView
@@ -23,8 +24,16 @@
         android:id="@+id/vasText"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:text="@string/raputa"
+        android:text=""
         android:textStyle="bold"
         android:textColor="@color/colorBlack"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/raputa"
+        android:id="@+id/raputa"
+        android:layout_alignParentLeft="true" />
 
 </RelativeLayout>

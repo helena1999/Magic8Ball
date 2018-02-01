@@ -2,6 +2,9 @@
     <string name="app_name">Magic8Ball</string>
     <string name="raputa">Raputa, et saada vastust!</string>
     <string name="menu">Raputa</string>
+    <string name="menüü">menüü</string>
+    <string name="esileht">esileht</string>
+    <string name="magic">magic</string>
     <!--Loome stringi massiivi oma vastuste jaoks -->
     <string-array name="vastused">
         <item>Jah, kindlasti</item>
