@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.opilane.magic8ball.RaputaActivity">
+    android:background="#E8EAF6"
+    tools:context="com.example.opilane.magic8ball.MainActivity"
+    android:id="@+id/magic1">
 
-</android.support.constraint.ConstraintLayout>
+    <!-- ImageView palli jaoks-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pall"
+        android:layout_centerInParent="true"
+        android:src="@drawable/eightball"/>
+    <!-- textView vastuste jaoks -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vasText"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/raputa"
+        android:id="@+id/raputa"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>
+

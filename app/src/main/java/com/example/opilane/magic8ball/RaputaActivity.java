@@ -1,13 +1,25 @@
 
 package com.example.opilane.magic8ball;
 
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorManager;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class RaputaActivity extends AppCompatActivity {
@@ -27,7 +39,7 @@ public class RaputaActivity extends AppCompatActivity {
 	TextView vastTekst;
 	ImageView pall;
 	Animation palliAnime;
-	ArrayList<String>vastused;
+	ArrayList<String> vastused;
 	Button raputa;
 
     @Override
@@ -80,21 +92,28 @@ public class RaputaActivity extends AppCompatActivity {
 	sensorManager.unregisterListener(this);
 	}
 	@Override
-	public void onSensorChanged(SensorEvent sensorEvent){if
+	public void onSensorChanged(SensorEvent sensorEvent){
 		if(sensorEvent.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-			if (isShakeEnough(sensorEvent.value[0], sensorEvent.value[1], sensorEvent.value[2])) {
+			if (isShakeEnough(sensorEvent.value[0], sensorEvent.values[1], sensorEvent.values[2])) {
 				showVastus(getVastus(), false);
 			}
 		}
 	}
 	@Override
-	public void onAccurancyChanged(Sensor sensor, int i){}
+	public void onAccurancyChanged(Sensor sensor, int i){
+
+	}
+
+
+}
 	private boolean isShakeEnough(float x, float y, float z){
-		double force = 0d
+		double force = 0d;
 
 		force += Math.pow((x-lastX) / SensorManager.GRAVITY_EARTH, 2.0);
 		force += Math.pow((y-lastY) / SensorManager.GRAVITY_EARTH, 2.0);
 		force += Math.pow((z-lastZ) / SensorManager.GRAVITY_EARTH, 2.0);
+
+	}
 
 
 
